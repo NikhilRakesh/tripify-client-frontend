@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 const api = axios.create({
-    baseURL: 'https://tripifyme.in:8000/api',
+    baseURL: 'https://tripifyme.in:/api',
     headers: {
       'Content-Type': 'application/json',
 
@@ -14,7 +14,7 @@ const api = axios.create({
   export const get_api = (token = null) => {
 
     return axios.create({
-      baseURL: 'https://tripifyme.in:8000/api',
+      baseURL: 'https://tripifyme.in:/api',
       headers: {
         'Content-Type': 'application/json',
         "Authorization": `Token ${token ? token : null}`
@@ -25,7 +25,7 @@ const api = axios.create({
   export const get_api_form = () => {  
   
     return axios.create({
-      baseURL: 'https://tripifyme.in:8000/api',
+      baseURL: 'https://tripifyme.in:/api',
       headers: {
         'Content-Type': 'multipart/form-data',
       }

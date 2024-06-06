@@ -41,8 +41,8 @@ const AnimatedWorldMap = () => {
             <ComposableMap
             projection="geoMercator"
             projectionConfig={{
-                scale: 100, // Adjust scale as needed
-                center: [15, 70] // Center on Asia, adjust as needed
+                scale: 150, // Adjust scale as needed
+                center: [85, 40] // Center on Asia, adjust as needed
             }}
             >
                 <Geographies geography={worldData}>

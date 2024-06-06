@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useTransition } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import api from './Axios';
 import { format } from 'date-fns';
 import LoadingSpinner from './LoadingSpinner';
@@ -50,6 +50,8 @@ const BlogPage = () => {
   const truncateText = (text, maxLength) => {
     return text?.length <= maxLength ? text : `${text?.slice(0, maxLength)}...`;
   };
+  
+  const Navigate = useNavigate()
 
   return isEmpty ? (
     <LoadingSpinner />
@@ -79,13 +81,16 @@ const BlogPage = () => {
                 {/* Main Blog Content */}
                 <div className='fixed h-screen overflow-y-scroll scrollbar'>
                     <div className='md:flex px-5 pb-36 bg-transparent absolute -z-10 w-full'>
+                      <div onClick={()=>{Navigate('/')}} className='cursor-pointer'>
+                        <img src="/TRIP999Artboard 1@4x (1) (Copy).png" alt=""  className='w-28 pt-5 cursor-pointer' />
+                      </div>
                         <motion.div 
                           initial={{ opacity: 0, x: -100 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ duration: 1 }}
                           className='flex justify-center'
                         >
-                          <img src="/blogwomen-removebg-preview.png" alt="" className='md:w-8/12 w-6/12' />
+                          <img src="/blogwomen-removebg-preview.png" alt="" className='md:w-8/12 w-6/12 ' />
                         </motion.div>
                         <motion.div 
                           className='text-white md:text-6xl text-5xl m-auto font-bold'

@@ -52,7 +52,7 @@ const EnquiryForm2= () => {
             type="text"
             id="name"
             name="name"
-            className='bg-transparent border border-black rounded-lg w-full'
+            className='bg-transparent border p-2 border-black rounded-lg w-full'
             value={formData.name}
             onChange={handleChange}
             required
@@ -62,7 +62,7 @@ const EnquiryForm2= () => {
           <label htmlFor="phone">Phone</label>
           <input
             type="tel"
-            className='bg-transparent border border-black rounded-lg w-full'
+            className='bg-transparent border p-2 border-black rounded-lg w-full'
             id="phone"
             name="phone"
             value={formData.phone}
