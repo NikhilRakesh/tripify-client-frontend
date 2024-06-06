@@ -1,0 +1,152 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes textFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-out forwards;
+}
+
+.text-fade-in {
+    animation: textFadeIn 2s ease-out forwards;
+}
+
+.service-card {
+    transition: transform 0.5s ease, opacity 0.5s ease, box-shadow 0.3s ease;
+}
+
+.service-card.animate-enter {
+    animation: fadeIn 0.5s forwards;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: #174edb;
+}
+
+.service-card.center {
+    transform: scale(1.1);
+    border-color: #174edb;
+}
+
+/* App.css */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .slick-slide {
+    padding: 0 10px; /* Adjust this as necessary */
+  }
+  
+  .slick-list {
+    margin: 0 -10px; /* Match this to the padding of slick-slide */
+  }
+  
+.neon-glow {
+  background-image: linear-gradient(to right, #00ffff, #0000ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: neonGlow 2s infinite;
+}
+
+@keyframes neonGlow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.neon-text {
+    color: #fff; 
+   
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-glow {
+    0% {
+        stroke: #FFC107;
+        stroke-width: 1;
+        opacity: 0.5;
+    }
+    50% {
+        stroke: #138fe2; /* Yellow color */
+        stroke-width: 2;
+        opacity: 1;
+    }
+    100% {
+        stroke: #FFC107;
+        stroke-width: 1;
+        opacity: 0.5;
+    }   
+}
+
+.pulse-glow {
+    animation: pulse-glow 1s infinite;
+}
+
+.loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it's above other elements */
+  }
+  
+  .loader {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+
+
+
+  

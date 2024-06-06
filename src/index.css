@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow-x: hidden; /* Hide the horizontal scrollbar */
+  overflow-y: scroll; /* Always show the vertical scrollbar */
+}
+
+body::-webkit-scrollbar {
+  width: 12px; /* Adjust the width as needed */
+  height: 0; /* Hide the horizontal scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  border-radius: 6px;
+}
+
+.blog::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar::-webkit-scrollbar {
+  display: none;
+}
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .service-card {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .service-card.animate-enter {
+    animation: fadeIn 0.5s forwards;
+  }
+  
