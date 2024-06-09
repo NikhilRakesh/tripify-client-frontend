@@ -3,10 +3,14 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import VideoPlayer from './VideoPlayer';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'; // Ensure you have react-icons installed
+import ClipLoader from 'react-spinners/ClipLoader'; // Optional spinner component
 
 const JourneyWithUs = () => {
 
     const [videos, setVideos] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [nextPageToken, setNextPageToken] = useState(null);
 
     const YOUTUBE_API_KEY = 'AIzaSyBzvlw8zHw8Q8KmVpeWaW_iB0pRaRaHQg0';
     const CHANNEL_ID = 'UC2ysr_lTuaAwYyVF0yCn8mw';
@@ -48,7 +52,7 @@ const JourneyWithUs = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-   
+
 
     const settings = {
         dots: false,
@@ -101,25 +105,28 @@ const JourneyWithUs = () => {
                     Journey with Us
                 </p>
             </div>
-            <div className=' overflow-hidden p-5'>
-            {/* <button className="prev-button" onClick={prevSlide}>
-                Prev
-            </button> */}
-                <Slider  {...settings}>
-                    {
-                        videos.map((video, index) => (
-                            <div key={index}>
+            <div className='flex items-center space-x-4'>
+                <button className="prev-button bg-gray-800 text-white p-3 rounded-full hover:bg-gray-700 transition duration-300" onClick={prevSlide}>
+                    <FaChevronLeft size={20} />
+                </button>
+                <div className='overflow-hidden flex-1 p-5'>
+                    <Slider ref={sliderRef} {...settings}>
+                        {videos.map((video, index) => (
+                            <div key={index} className='flex flex-col items-center'>
                                 <VideoPlayer
                                     url={`https://www.youtube.com/watch?v=${video?.snippet?.resourceId?.videoId}`}
                                     isCenter={index === 1}
                                 />
+                                <div className='text-xs py-5 px-5 font-sans font-semibold'>
+                                    <p className='text-center'>{video?.snippet?.title}</p>
+                                </div>
                             </div>
-                        ))
-                    }
-                </Slider>
-                {/* <button className="next-button" onClick={nextSlide}>
-                Next
-            </button> */}
+                        ))}
+                    </Slider>
+                </div>
+                <button className="next-button bg-gray-800 text-white p-3 rounded-full hover:bg-gray-700 transition duration-300" onClick={nextSlide}>
+                    <FaChevronRight size={20} />
+                </button>
             </div>
         </div>
     );

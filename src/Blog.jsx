@@ -21,7 +21,7 @@ const Blog = ({ male }) => {
             }
         };
         fetchBlogs();
-    }, []); 
+    }, []);
 
     useEffect(() => {
         if (blogs.length === 0) return;
@@ -31,7 +31,7 @@ const Blog = ({ male }) => {
         }, 3000);
 
         return () => clearInterval(interval);
-    }, [blogs]); 
+    }, [blogs]);
 
     const getFilteredBlogs = () => {
         return blogs.filter(blog => blog.blogs[0].male === male);

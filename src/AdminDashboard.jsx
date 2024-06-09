@@ -311,7 +311,6 @@ const AddBlogForm = ({ onAddBlog }) => {
                                         value={section.subHeader}
                                         onChange={(e) => handleSectionChange(blogIndex, sectionIndex, 'subHeader', e.target.value)}
                                         className="mt-1 block w-full border border-gray-300 rounded-md p-2"
-                                        required
                                     />
                                 </div>
                                 <div className="flex flex-col">
@@ -323,7 +322,6 @@ const AddBlogForm = ({ onAddBlog }) => {
                                         value={section.description}
                                         onChange={(e) => handleSectionChange(blogIndex, sectionIndex, 'description', e.target.value)}
                                         className="mt-1 block w-full border border-gray-300 rounded-md p-2 resize-none"
-                                        required
                                     ></textarea>
                                 </div>
                             </div>
