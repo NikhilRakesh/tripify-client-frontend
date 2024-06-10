@@ -38,30 +38,32 @@ const WomenTraveling = () => {
                 <div
                     className="absolute inset-0 z-0"
                     style={{
-                        backgroundImage: `url('https://images.unsplash.com/photo-1484627147104-f5197bcd6651?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
+                        backgroundImage: `url('/pexels-filiamariss-20497136.jpg')`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         filter: 'brightness(0.7)',
                     }}
                 >
-                    <div className="absolute inset-0 bg-gradient-to-br from-sky-700 to-black opacity-50" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-sky-700 to-black opacity-30" />
                 </div>
             </Parallax>
             {/* Content */}
-            <div className="relative z-10 text-white text-center lg:text-left w-full max-w-4xl mx-auto p-4 lg:p-8">
-                <div>
+            <div className="relative z-10 text-white text-center lg:text-left w-full md:m-32 md:p-36 md:left-1/4 ">
+                <div className='flex justify-center md:justify-start'>
                     <img src="/PinkPassport new logo.png" alt="" className='w-6/12' />
                 </div>
                 <animated.h1 className="text-4xl font-bold mb-4 text-shadow-lg lg:text-5xl xl:text-6xl" style={fade}>
-                    {headings[index]}
+                    Specifically designed travel packages for <span className='text-pink-500'>Women</span>
                 </animated.h1>
                 <animated.p className="text-lg text-shadow-sm mt-2 lg:mt-4" style={fade}>
                     {sentences[index]}
                 </animated.p>
-                <animated.div className="mt-8 text-lg " style={fade}>
-                    <p className="mb-2">Discover amazing destinations tailored for women travelers.</p>
-                    <p className="mb-2">Connect with like-minded women from around the globe.</p>
-                    <p className="mb-2">Access exclusive travel tips and resources.</p>
+                <animated.div className="mt-8 text-lg" style={fade}>
+                    <ul className="list-disc list-inside">
+                        <li className="mb-2">Discover amazing destinations tailored for women travelers.</li>
+                        <li className="mb-2">Connect with like-minded women from around the globe.</li>
+                        <li className="mb-2">Access exclusive travel tips and resources.</li>
+                    </ul>
                 </animated.div>
                 <animated.div className="mt-8" style={fade}>
                     <Link to="/pink-passport">

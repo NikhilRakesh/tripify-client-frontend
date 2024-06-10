@@ -25,6 +25,9 @@ import { ParallaxProvider } from 'react-scroll-parallax'
 import CoprateTravelPage from './CoprateTravelPage'
 import LandExplore from './LandExplore'
 import TaxiBooking from './TaxiBooking'
+import ReturnPolicy from './ReturnPolicy'
+import PrivacyPolicy from './PrivacyPage'
+import TermsOfServicePage from './TermsOfServicePage'
 
 function App() {
 
@@ -57,6 +60,9 @@ function App() {
           <Route path="/pink-passport" element={<PinkPassport />} />
           <Route path="/Land-Explore" element={<LandExplore />} />
           <Route path="/Coprate-TravelPage" element={<CoprateTravelPage />} />
+          <Route path="/Return-Policy" element={<ReturnPolicy />} />
+          <Route path="/Privacy-Policy" element={<PrivacyPolicy />} />
+          <Route path="/TermsOf-ServicePage" element={<TermsOfServicePage />} />
         </Routes>
     </ParallaxProvider>
   )

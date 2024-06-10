@@ -12,7 +12,7 @@ const TaxiBooking = () => {
   const navigate = useNavigate()
 
   return (
-    <div ref={ref} className="w-full py-20 text-white">
+    <div ref={ref} className="w-full py-16 text-white">
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}

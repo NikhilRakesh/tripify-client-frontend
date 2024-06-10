@@ -116,6 +116,7 @@ const JourneyWithUs = () => {
                                 <VideoPlayer
                                     url={`https://www.youtube.com/watch?v=${video?.snippet?.resourceId?.videoId}`}
                                     isCenter={index === 1}
+                                    video={video}
                                 />
                                 <div className='text-xs py-5 px-5 font-sans font-semibold'>
                                     <p className='text-center'>{video?.snippet?.title}</p>

@@ -59,24 +59,7 @@ const BlogPage = () => {
 
 
     <div className="flex flex-col md:flex-row  gap-8 relative h-screen  bg-gray-200 z-0 ">
-      <div className='bg-gradient-to-r from-[#ce8936] f1b852 via-[#f6c871] to-[#f1b852] md:flex px-5 pb-36 absolute -z-10 w-full h-1/2'>
-        {/* <motion.div 
-              initial={{ opacity: 0, x: -100 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
-              className=''
-            >
-              <img src="/blogwomen-removebg-preview.png" alt="" className='w-8/12' />
-            </motion.div>
-            <motion.div 
-              className='text-white text-6xl m-auto font-bold'
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.5 }}
-            >
-              <h1>The latest writings from our team</h1>
-              <p className='text-lg text-black p-2'>Embark on a Journey of Discovery with Tripifyme</p>
-            </motion.div> */}
+      <div className='bg-gradient-to-r from-[#ce8936] via-[#f6c871] to-[#f1b852] md:flex px-5 pb-36 absolute -z-10 w-full h-1/2'>
       </div>
       {/* Main Blog Content */}
       <div className='fixed h-screen overflow-y-scroll scrollbar'>
@@ -96,8 +79,8 @@ const BlogPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            <h1>The latest writings from our team</h1>
-            <p className='text-lg text-black p-2'>Embark on a Journey of Discovery with Tripifyme</p>
+            <h1 >Tripifyme Times</h1>
+            <p className='text-lg text-black p-2'>Your Travel Updates</p>
           </motion.div>
         </div>
         <div className='md:flex gap-8 md:px-10 px-4'>
@@ -124,7 +107,7 @@ const BlogPage = () => {
               transition={{ duration: 0.5 }}
             >
               <div className="flex items-center ">
-                <img src="https://via.placeholder.com/50" alt="Author Logo" className="w-12 h-12 rounded-full shadow-lg" />
+                <img src="/tripify-icone.png" alt="Author Logo" className="w-12 h-12 rounded-full shadow-lg" />
                 <div className="ml-4">
                   <h4 className="text-black font-bold text-lg">{blog.blogs[0].author}</h4>
                   <p className="text-black text-sm">author</p>

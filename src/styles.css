@@ -146,6 +146,20 @@
     100% { transform: rotate(360deg); }
   }
   
+  .custom-line-through {
+    position: relative; /* Required for absolute positioning */
+    color: #ffa500; /* Text color */
+  }
+  
+  .custom-line-through::after {
+    content: ""; /* Required for the pseudo-element */
+    position: absolute; /* Position relative to the parent */
+    top: 50%; /* Adjust to vertically center the line */
+    left: 0;
+    right: 0;
+    border-bottom: 5px solid #ffa500; /* Color of the line-through */
+  }
+  
 
 
 

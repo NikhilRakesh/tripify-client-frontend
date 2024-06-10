@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Blog from './Blog';
 import InquiryForm from './InquiryForm';
+import { FaClock, FaHandshake, FaCouch, FaUserTie, FaHeadset } from 'react-icons/fa';
 
 const CorporateTravelPage = () => {
 
@@ -95,68 +96,63 @@ const CorporateTravelPage = () => {
       </motion.div>
 
       {/* New content */}
-      <div className="bg-gray-100 py-12">
-        <div className="container mx-auto">
-          <div className="text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-8">We Promise</h2>
+      <div className="bg-gray-100 py-16">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-800 mb-4">We Promise</h2>
+            <p className="text-lg text-gray-600">Our commitment to providing exceptional travel experiences.</p>
           </div>
-          <div className="flex flex-wrap justify-around">
-            <div className="w-full lg:w-4/12 mb-8 lg:mb-0">
-              <div className="text-center bg-white rounded-lg shadow-lg p-6">
-                <div className="mb-4">
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">Punctuality</h3>
-                  <p className="text-gray-600">Reliable arrivals so that you are never late</p>
-                </div>
+          <div className="flex flex-wrap justify-center gap-8">
+            <div className="w-full md:w-5/12 lg:w-1/4 mb-8">
+              <div className="bg-white rounded-lg shadow-lg p-8 text-center">
+                <FaClock className="text-blue-500 text-4xl mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-gray-800 mb-2">Punctuality</h3>
+                <p className="text-gray-600">Reliable arrivals so that you are never late.</p>
               </div>
             </div>
-            <div className="w-full lg:w-4/12 mb-8 lg:mb-0">
-              <div className="text-center bg-white rounded-lg shadow-lg p-6">
-                <div className="mb-4">
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">Trustworthy travel</h3>
-                  <p className="text-gray-600">Registered and dependable network of drivers and personnel. Everyone should be at ease.</p>
-                </div>
+            <div className="w-full md:w-5/12 lg:w-1/4 mb-8">
+              <div className="bg-white rounded-lg shadow-lg p-8 text-center">
+                <FaHandshake className="text-green-500 text-4xl mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-gray-800 mb-2">Trustworthy Travel</h3>
+                <p className="text-gray-600">Registered and dependable network of drivers and personnel. Everyone should be at ease.</p>
               </div>
             </div>
-            <div className="w-full lg:w-4/12 mb-8 lg:mb-0">
-              <div className="text-center bg-white rounded-lg shadow-lg p-6">
-                <div className="mb-4">
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">Comfort first</h3>
-                  <p className="text-gray-600">Customizable and accessorized trips anytime, anywhere. Relax and Recharge</p>
-                </div>
+            <div className="w-full md:w-5/12 lg:w-1/4 mb-8">
+              <div className="bg-white rounded-lg shadow-lg p-8 text-center">
+                <FaCouch className="text-purple-500 text-4xl mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-gray-800 mb-2">Comfort First</h3>
+                <p className="text-gray-600">Customizable and accessorized trips anytime, anywhere. Relax and recharge.</p>
               </div>
             </div>
-            <div className="w-full lg:w-4/12 mb-8 lg:mb-0">
-              <div className="text-center bg-white rounded-lg shadow-lg p-6">
-                <div className="mb-4">
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">Professional drivers</h3>
-                  <p className="text-gray-600">Professionalism guaranteed throughout with registered and trained personnel all through</p>
-                </div>
+            <div className="w-full md:w-5/12 lg:w-1/4 mb-8">
+              <div className="bg-white rounded-lg shadow-lg p-8 text-center">
+                <FaUserTie className="text-orange-500 text-4xl mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-gray-800 mb-2">Professional Drivers</h3>
+                <p className="text-gray-600">Professionalism guaranteed throughout with registered and trained personnel all through.</p>
               </div>
             </div>
-            <div className="w-full lg:w-4/12 mb-8 lg:mb-0">
-              <div className="text-center bg-white rounded-lg shadow-lg p-6">
-                <div className="mb-4">
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">24 hours customer service</h3>
-                  <p className="text-gray-600">We are never hesitant to help you anytime, anywhere. We got your back</p>
-                </div>
+            <div className="w-full md:w-5/12 lg:w-1/4 mb-8">
+              <div className="bg-white rounded-lg shadow-lg p-8 text-center">
+                <FaHeadset className="text-red-500 text-4xl mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-gray-800 mb-2">24 Hours Customer Service</h3>
+                <p className="text-gray-600">We are never hesitant to help you anytime, anywhere. We've got your back.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="text-center my-12">
+      {/* <div className="text-center my-12">
         <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-8">Client Testimonials</h2>
-        {/* Add client testimonials here if available */}
       </div>
 
       <div className="bg-cover bg-center py-20" style={{ backgroundImage: 'url("/client-login-bg.jpg")' }}>
         <div className="container mx-auto text-center text-white">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">Do More with Our Client Login Platform</h2>
           <p className="text-lg mb-8">Streamline the booking process for your employees with secure, individual logins. No more scrambling for usernames or passwords – each team member can access and manage their travel details independently</p>
-          {/* <a href="#" className="bg-white text-blue-600 px-8 py-3 rounded-full hover:bg-gray-100 transition-colors duration-300 inline-block">Know more</a> */}
+          <a href="#" className="bg-white text-blue-600 px-8 py-3 rounded-full hover:bg-gray-100 transition-colors duration-300 inline-block">Know more</a>
         </div>
-      </div>
+      </div> */}
 
       <div className="container mx-auto py-20">
         <div className="text-center">
@@ -173,7 +169,7 @@ const CorporateTravelPage = () => {
             <p className="text-lg text-gray-600 mb-4">Scalable solutions, centralized management, dedicated account manager</p>
           </div>
         </div>
-        
+
       </div>
 
       <div className="bg-gray-100 py-20">
@@ -183,7 +179,7 @@ const CorporateTravelPage = () => {
             <p className="text-lg mb-8">Tripifyme isn't just another travel agency. We're your one-stop shop for effortless corporate travel management. Ditch the spreadsheets and endless emails – our user-friendly platform streamlines booking, simplifies approvals, and gives you real-time insights. Focus on your business goals, while we handle the logistics with expertise and care. We prioritize punctuality, reliability, comfort, and professional drivers, ensuring a stress-free experience for your team. Experience the Tripifyme difference – elevate your business travel and empower your employees to succeed.</p>
           </div>
           <div className="text-center">
-          <InquiryForm />
+            <InquiryForm />
           </div>
         </div>
       </div>
