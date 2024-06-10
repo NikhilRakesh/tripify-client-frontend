@@ -251,7 +251,6 @@ const AddBlogForm = ({ onAddBlog }) => {
                                 value={blog.header}
                                 onChange={(e) => handleBlogChange(blogIndex, 'header', e.target.value)}
                                 className="mt-1 block w-full border border-gray-300 rounded-md p-2"
-                                required
                             />
                         </div>
                         <div className="flex flex-col">

@@ -155,7 +155,7 @@ const TermsOfServicePage = () => {
                     {/* Section 14 */}
                     <h3 className="text-2xl font-bold mb-4">SECTION 14 - INDEMNIFICATION</h3>
                     <p className="text-lg mb-6">
-                        You agree to indemnify, defend and hold harmless Nolja and our parent, subsidiaries, affiliates, partners, officers, directors, agents, contractors, licensors, Service providers, subcontractors, suppliers, interns and employees, harmless from any claim or demand, including reasonable attorneys’ fees, made by any third-party due to or arising out of your breach of these Terms of Service or the documents they incorporate by reference, or your violation of any law or the rights of a third-party.
+                        You agree to indemnify, defend and hold harmless tripify and our parent, subsidiaries, affiliates, partners, officers, directors, agents, contractors, licensors, Service providers, subcontractors, suppliers, interns and employees, harmless from any claim or demand, including reasonable attorneys’ fees, made by any third-party due to or arising out of your breach of these Terms of Service or the documents they incorporate by reference, or your violation of any law or the rights of a third-party.
                     </p>
                     {/* Section 15 */}
                     <h3 className="text-2xl font-bold mb-4">SECTION 15 - SEVERABILITY</h3>

@@ -154,7 +154,7 @@ const PrivacyPage = () => {
 
             <h3 className='font-bold text-2xl'>Contact</h3>
 
-            <p>Should you have any questions about our privacy practices or this Privacy Policy, or if you would like to exercise any of the rights available to you, please call +91 9778282728 or email us at info@nolja.in or contact us at Nolja, Thiruvananthapuram KL, India, 695015</p>
+            <p>Should you have any questions about our privacy practices or this Privacy Policy, or if you would like to exercise any of the rights available to you, please call +91  9072121217 or email us at sales@tripifyme.com or contact us at Nolja, Thiruvananthapuram KL, India, 695015</p>
         </div>
     )
 }

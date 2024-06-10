@@ -139,7 +139,7 @@ const InquiryForm = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               type="submit"
-              className="bg-[#A91079] w-4/12 text-white py-3 px-6 rounded-md shadow-md transition-transform duration-200 ease-in-out"
+              className="bg-[#A91079] md:w-4/12 text-white py-3 px-6 rounded-md shadow-md transition-transform duration-200 ease-in-out"
             >
               Request a call back
             </motion.button>
@@ -147,7 +147,7 @@ const InquiryForm = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               type="submit"
-              className="bg-[#A91079] w-4/12 text-white py-3 px-6 rounded-md shadow-md transition-transform duration-200 ease-in-out"
+              className="bg-[#A91079] md:w-4/12 text-white py-3 px-6 rounded-md shadow-md transition-transform duration-200 ease-in-out"
               onClick={redirectToWhatsApp}
             >
               Redirect to whatsapp
