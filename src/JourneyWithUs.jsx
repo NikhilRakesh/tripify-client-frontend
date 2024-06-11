@@ -110,6 +110,14 @@ const JourneyWithUs = () => {
         sliderRef.current.slickPrev();
     };
 
+     function truncateText(text, maxLength) {
+        if (text?.length <= maxLength) {
+            return text;
+        }
+        return text?.slice(0, maxLength) + '...';
+    }
+
+
     return (
         <div className='mb-10'>
             <div>
@@ -117,11 +125,11 @@ const JourneyWithUs = () => {
                     Journey with Us
                 </p>
             </div>
-            <div className='flex items-center space-x-4'>
+            <div className='flex items-center '>
                 <button className="prev-button bg-gray-800 text-white p-3 rounded-full hover:bg-gray-700 transition duration-300" onClick={prevSlide}>
                     <FaChevronLeft size={20} />
                 </button>
-                <div className='overflow-hidden flex-1 p-5'>
+                <div className='overflow-hidden flex-1 m-auto p-5'>
                     {loading ? (
                         <div className='flex justify-center items-center h-full'>
                             <ClipLoader color="#000000" loading={loading} size={50} />
@@ -135,9 +143,9 @@ const JourneyWithUs = () => {
                                         isCenter={index === 1}
                                         video={video}
                                     />
-                                    <div className='mt-4 p-3  w-full max-w-xs'>
-                                        <p className='text-center text-lg font-semibold text-gray-800'>
-                                            {video?.snippet?.title}
+                                    <div className='mt-4 py-3 px-5  w-full'>
+                                        <p className='text-center text-sm  font-semibold text-gray-800'>
+                                            {truncateText(video?.snippet?.title,100)}
                                         </p>
                                     </div>
                                 </div>
