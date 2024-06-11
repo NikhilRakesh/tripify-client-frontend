@@ -28,12 +28,14 @@ import TaxiBooking from './TaxiBooking'
 import ReturnPolicy from './ReturnPolicy'
 import PrivacyPolicy from './PrivacyPage'
 import TermsOfServicePage from './TermsOfServicePage'
+import { FaWhatsapp } from 'react-icons/fa'
+import Whatsapp from './Whatsapp'
 
 function App() {
 
-
   const Home = () => (
     <>
+      <Whatsapp />
       <Headder2 />
       <Services />
       <Destinations />
@@ -42,8 +44,8 @@ function App() {
       <CorporateTravel />
       <Review />
       <JourneyWithUs />
-      <TaxiBooking/>
-      <Blog male={true}/>
+      <TaxiBooking />
+      <Blog male={true} />
       <InquiryForm />
       <Footer />
     </>
@@ -52,18 +54,18 @@ function App() {
 
   return (
     <ParallaxProvider>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/blogs/:id" element={<BlogPage />} />
-          <Route path="/admin-login" element={<AdminLogin />} />
-          <Route path="/admin-dashboard" element={<AdminDashboard />} />
-          <Route path="/pink-passport" element={<PinkPassport />} />
-          <Route path="/Land-Explore" element={<LandExplore />} />
-          <Route path="/Coprate-TravelPage" element={<CoprateTravelPage />} />
-          <Route path="/Return-Policy" element={<ReturnPolicy />} />
-          <Route path="/Privacy-Policy" element={<PrivacyPolicy />} />
-          <Route path="/TermsOf-ServicePage" element={<TermsOfServicePage />} />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/blogs/:id" element={<BlogPage />} />
+        <Route path="/admin-login" element={<AdminLogin />} />
+        <Route path="/admin-dashboard" element={<AdminDashboard />} />
+        <Route path="/pink-passport" element={<PinkPassport />} />
+        <Route path="/Land-Explore" element={<LandExplore />} />
+        <Route path="/Coprate-TravelPage" element={<CoprateTravelPage />} />
+        <Route path="/Return-Policy" element={<ReturnPolicy />} />
+        <Route path="/Privacy-Policy" element={<PrivacyPolicy />} />
+        <Route path="/TermsOf-ServicePage" element={<TermsOfServicePage />} />
+      </Routes>
     </ParallaxProvider>
   )
 }

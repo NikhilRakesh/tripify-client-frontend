@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import api from './Axios';
+import toast, { Toaster } from 'react-hot-toast';
 
 const InquiryForm = () => {
   const [formData, setFormData] = useState({
@@ -22,8 +23,9 @@ const InquiryForm = () => {
 
     try {
       const response = await api.post('/enquiry', formData);
-      if (response.status === 200) {
-
+      console.log(response);
+      if (response.status === 201) {
+        toast.success('Enquiry Successfully Submited')
       }
     } catch (error) {
       console.log(`error on admin-login: ${error}`);
@@ -55,7 +57,7 @@ const InquiryForm = () => {
     const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
     window.open(whatsappUrl, '_blank');
-}
+  }
 
   return (
     <motion.div
@@ -155,6 +157,7 @@ const InquiryForm = () => {
           </div>
         </form>
       </div>
+      <Toaster />
     </motion.div>
   );
 };

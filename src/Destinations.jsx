@@ -11,28 +11,28 @@ const Destinations = () => {
         {
             image: 'rectangle-25.png',
             duration: '3 Days, 2 Nights',
-            price: 500,
+            price: 19000,
             description: 'Explore the Beauty of the island for 3 days and 2 nights with our travel agency',
             country: 'Indonesia'
         },
         {
             image: 'rectangle-26.png',
             duration: '3 Days, 2 Nights',
-            price: 800,
+            price: 34999,
             description: 'Explore the Shrines and Blossoms here in this beautiful country',
             country: 'Japan'
         },
         {
             image: 'rectangle-25.png',
             duration: '3 Days, 2 Nights',
-            price: 500,
+            price: 19000,
             description: 'Explore the Beauty of the island for 3 days and 2 nights with our travel agency',
             country: 'Indonesia'
         },
         {
             image: 'rectangle-26.png',
             duration: '3 Days, 2 Nights',
-            price: 800,
+            price: 34999,
             description: 'Explore the Shrines and Blossoms here in this beautiful country',
             country: 'Japan'
         },

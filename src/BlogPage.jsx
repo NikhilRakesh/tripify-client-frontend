@@ -84,8 +84,8 @@ const BlogPage = () => {
           </motion.div>
         </div>
         <div className='md:flex gap-8 md:px-10 px-4'>
-          <div onClick={() => { Navigate('/') }} className='absolute'>
-            <img src="/TRIP999Artboard 1@4x (1) (Copy).png" alt="" className='w-28 pt-5 cursor-pointer' />
+          <div onClick={() => { Navigate('/') }} className='absolute top-0'>
+            <img src="/TRIP999Artboard 1@4x (1) (Copy).png" alt="" className='w-28 pt-5  cursor-pointer' />
           </div>
           <div className='opacity-25'>
             <DotPattern width={16} height={16} cx={2} cy={2} cr={2} />
@@ -133,7 +133,7 @@ const BlogPage = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="p-4">
-              <div className='border border-white bg-white bg-opacity-20 rounded-lg mb-5'>
+              <div className=' rounded-lg mb-5'>
                 <EnquiryForm2 />
               </div>
               <h3 className="text-xl font-semibold mb-4">Related Blogs</h3>

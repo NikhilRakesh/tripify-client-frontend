@@ -4,7 +4,7 @@ const PackageCard = ({ packageInfo }) => {
     const { image, duration, price, description, country } = packageInfo;
 
     return (
-        <div className="border rounded-lg sm:w-[calc(50%-1rem)] md:w-11/12 md:w-shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl mx-auto mb-6">
+        <div className="border rounded-lg shadow-lg sm:w-[calc(50%-1rem)] md:w-11/12 md:w-shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl mx-auto mb-6">
             <div className="relative">
                 <img className="w-full h-[200px] sm:h-[300px] object-cover" src={image} alt={country} />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
@@ -15,7 +15,7 @@ const PackageCard = ({ packageInfo }) => {
             <div className="p-4 sm:p-6 bg-white">
                 <div className="flex justify-between mb-2 sm:mb-4">
                     <p className="text-sm sm:text-lg font-medium text-gray-700">{duration}</p>
-                    <p className="text-sm sm:text-lg font-medium text-gray-700">${price} / Person</p>
+                    <p className="text-sm sm:text-lg font-medium text-gray-700">₹{price} / Person</p>
                 </div>
                 <p className="text-xs sm:text-base text-gray-600 mb-2 sm:mb-4">{description}</p>
                 <div className="flex justify-between items-center">

@@ -112,8 +112,8 @@ const PinkPassport = () => {
 
     try {
       const response = await api.post('/enquiry', formData);
-      if (response.status === 200) {
-        console.log('Enquiry submitted successfully');
+      if (response.status === 201) {
+        toast.success('Enquiry Successfully Submited')
       }
     } catch (error) {
       console.log('Error submitting enquiry:', error);

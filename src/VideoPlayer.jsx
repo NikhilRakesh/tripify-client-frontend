@@ -2,7 +2,7 @@ import React from 'react';
 import ReactPlayer from 'react-player';
 
 const VideoPlayer = ({ url, isCenter, video }) => {
-    console.log('url', video);
+   
     return (
         <div className={`relative w-full h-full max-w-md mx-auto aspect-video overflow-hidden rounded-lg shadow-lg bg-black ${isCenter ? ' border-4 border-black shadow-lg' : ''}`}>
             <ReactPlayer

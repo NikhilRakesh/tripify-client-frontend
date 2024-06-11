@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import api from './Axios';
 
-const EnquiryForm2= () => {
+const EnquiryForm2 = () => {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -41,9 +41,10 @@ const EnquiryForm2= () => {
     const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
     window.open(whatsappUrl, '_blank');
-}
+  }
+  
   return (
-    <div className="enquiry-form-container p-5">
+    <div className="enquiry-form-container p-5 ">
       <h2 className='text-center font-bold'>Enquiry Form</h2>
       <form onSubmit={handleSubmit} className="enquiry-form py-5 flex  flex-col gap-5" >
         <div className="form-group flex  gap-5">
@@ -70,9 +71,9 @@ const EnquiryForm2= () => {
             required
           />
         </div>
-        <div className='flex justify-center mt-5 gap-5'>
-             <button type="submit" className='bg-black text-white w-1/2 py-2 px-5 rounded-full'>Request a call back</button>
-             <button type="button" className='bg-black text-white w-1/2 py-2 px-5 rounded-full' onClick={redirectToWhatsApp}>Redirect to whatsapp</button>
+        <div className='flex justify-center mt-5 gap-8 text-xs'>
+          <button type="submit" className='bg-black text-white w-1/2 py-2 px-5 rounded-md'>Request a call back</button>
+          <button type="button" className='bg-black text-white w-1/2 py-2 px-5 rounded-md' onClick={redirectToWhatsApp}>Redirect to whatsapp</button>
         </div>
       </form>
     </div>
