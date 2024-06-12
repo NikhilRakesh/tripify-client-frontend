@@ -28,6 +28,7 @@ const InquiryForm = () => {
         toast.success('Enquiry Successfully Submited')
       }
     } catch (error) {
+      toast.error('Enquiry Not Submited')
       console.log(`error on admin-login: ${error}`);
     }
     setFormData({

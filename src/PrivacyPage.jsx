@@ -1,11 +1,18 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const PrivacyPage = () => {
+
+    const navigate = useNavigate()
+
     return (
         <div className='bg-gray-100 min-h-screen py-12 px-5 space-y-8  text-lg'>
+            <div className='cursor-pointer absolute top-0 left-0 p-10' onClick={() => navigate('/')}>
+                <img src="/TRIP999Artboard 1@4x (1).png" alt="" className='w-20' />
+            </div>
             <h2 className='font-bold text-2xl'>Privacy Policy</h2>
             <p className='text-lg'>
-                This Privacy Policy describes how nolja (the "Site", "we", "us", or "our") collects, uses, and discloses your personal information when you visit, use our services, or make a purchase from nolja.in (the "Site") or otherwise communicate with us (collectively, the "Services"). For purposes of this Privacy Policy, "you" and "your" means you as the user of the Services, whether you are a customer, website visitor, or another individual whose information we have collected pursuant to this Privacy Policy.
+                This Privacy Policy describes how TRIPIFYME BY QATAYWORLD PVT LTD (the "Site", "we", "us", or "our") collects, uses, and discloses your personal information when you visit, use our services, or make a purchase from TRIPIFYME BY QATAYWORLD PVT LTD.in (the "Site") or otherwise communicate with us (collectively, the "Services"). For purposes of this Privacy Policy, "you" and "your" means you as the user of the Services, whether you are a customer, website visitor, or another individual whose information we have collected pursuant to this Privacy Policy.
             </p>
             <p>
                 Please read this Privacy Policy carefully. By using and accessing any of the Services, you agree to the collection, use, and disclosure of your information as described in this Privacy Policy. If you do not agree to this Privacy Policy, please do not use or access any of the Services.
@@ -154,7 +161,7 @@ const PrivacyPage = () => {
 
             <h3 className='font-bold text-2xl'>Contact</h3>
 
-            <p>Should you have any questions about our privacy practices or this Privacy Policy, or if you would like to exercise any of the rights available to you, please call +91  9072121217 or email us at sales@tripifyme.com or contact us at Nolja, Thiruvananthapuram KL, India, 695015</p>
+            <p>Should you have any questions about our privacy practices or this Privacy Policy, or if you would like to exercise any of the rights available to you, please call +91  9072121217 or email us at sales@tripifyme.com or contact us at TRIPIFYME BY QATAYWORLD PVT LTD, Thiruvananthapuram KL, India, 695015</p>
         </div>
     )
 }

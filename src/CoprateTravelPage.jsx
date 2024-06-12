@@ -1,15 +1,23 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import Blog from './Blog';
 import InquiryForm from './InquiryForm';
 import { FaClock, FaHandshake, FaCouch, FaUserTie, FaHeadset } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const CorporateTravelPage = () => {
+
+  const inquiryFormRef = useRef(null);
 
   useEffect(() => {
     window.scrollTo(0, 0); // Scroll to the top of the page when component mounts
   }, []);
 
+  const scrollToInquiryForm = () => {
+    inquiryFormRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const navigate = useNavigate()
 
   return (
     <div className="w-full mx-auto p-10">
@@ -18,6 +26,8 @@ const CorporateTravelPage = () => {
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
+          onClick={() => { navigate('/') }}
+          className='cursor-pointer'
         >
           <img src="/logo.png" alt="Company Logo" className="w-32" />
         </motion.div>
@@ -26,7 +36,9 @@ const CorporateTravelPage = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors duration-300">
+          <button className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors duration-300"
+            onClick={scrollToInquiryForm}
+          >
             Contact Us
           </button>
         </motion.div>
@@ -178,7 +190,7 @@ const CorporateTravelPage = () => {
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-8">Why Choose Us?</h2>
             <p className="text-lg mb-8">Tripifyme isn't just another travel agency. We're your one-stop shop for effortless corporate travel management. Ditch the spreadsheets and endless emails – our user-friendly platform streamlines booking, simplifies approvals, and gives you real-time insights. Focus on your business goals, while we handle the logistics with expertise and care. We prioritize punctuality, reliability, comfort, and professional drivers, ensuring a stress-free experience for your team. Experience the Tripifyme difference – elevate your business travel and empower your employees to succeed.</p>
           </div>
-          <div className="text-center">
+          <div className="text-center" ref={inquiryFormRef}>
             <InquiryForm />
           </div>
         </div>

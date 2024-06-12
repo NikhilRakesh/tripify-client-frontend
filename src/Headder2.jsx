@@ -32,15 +32,17 @@ const Header2 = () => {
                     <div className="absolute top-0 right-0 w-64 h-full bg-transparent backdrop-blur-lg shadow-lg z-40 flex flex-col items-start p-4">
                         <button className="text-white font-bold text-lg mb-4" onClick={toggleNav}>Close</button>
                         <nav className="flex flex-col space-y-2">
-                            <a href="#" className="text-gray-400 cursor-pointer">Gallery</a>
+                            <a onClick={() => { navigate('/about-us') }} className="text-gray-400 cursor-pointer">About Us</a>
+                            <a className="text-gray-400 cursor-pointer">Gallery</a>
                             <a onClick={() => navigate('/pink-passport')} className="text-gray-400 cursor-pointer">Pink Passport</a>
                             <a onClick={() => navigate('/Coprate-TravelPage')} className="text-gray-400 cursor-pointer">Corporate travel</a>
                             <a onClick={() => navigate('/Land-Explore')} className="text-gray-400 cursor-pointer">LandXplorer</a>
+                            <a onClick={() => navigate('/payment')} className="text-gray-400 cursor-pointer">Make Payment</a>
                         </nav>
-                    </div>
+                    </div>       
                 )}
                 <div className='md:flex justify-between relative '>
-                    <div className='md:w-1/2 p-4 md:p-7 flex flex-col gap-10 md:gap-0 '>
+                    <div className='md:w-1/2 p-4 md:p-7 flex flex-col gap-10 md:gap-0 '>    
                         <div className='flex md:justify-start justify-center'>
                             <img src="/TRIP999Artboard 1@4x (1).png" alt="logo" className='w-32 md:w-48' />
                         </div>
@@ -53,7 +55,7 @@ const Header2 = () => {
                                         <span >At a Time</span>
                                     </p>
                                     <p className="text-4xl md:text-5xl lg:text-7xl font-bold text-[#ffa500] leading-tight">
-                                        <span className='text-white'>Book</span> <span className=' custom-line-through text-white'>a Trip</span> 
+                                        <span className='text-white'>Book</span> <span className=' custom-line-through text-white'>a Trip</span>
                                         <br />
                                         <span className='md:pl-48'>an Experience</span>
                                     </p>
@@ -75,7 +77,7 @@ const Header2 = () => {
                     </div>
                     <div className={`md:w-1/2 p-4 md:p-8 ${isVisible ? 'fade-in' : ''}`}>
                         <div className='w-full'>
-                            <img src="/Group 1000001756.png" alt="Illustration" className='w-full' />
+                            <img src="/phone-image-tripify.png" alt="Illustration" className='w-full' />
                         </div>
                     </div>
                 </div>

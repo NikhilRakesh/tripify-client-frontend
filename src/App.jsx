@@ -30,6 +30,8 @@ import PrivacyPolicy from './PrivacyPage'
 import TermsOfServicePage from './TermsOfServicePage'
 import { FaWhatsapp } from 'react-icons/fa'
 import Whatsapp from './Whatsapp'
+import About from './About'
+import Payment from './Payment'
 
 function App() {
 
@@ -65,6 +67,8 @@ function App() {
         <Route path="/Return-Policy" element={<ReturnPolicy />} />
         <Route path="/Privacy-Policy" element={<PrivacyPolicy />} />
         <Route path="/TermsOf-ServicePage" element={<TermsOfServicePage />} />
+        <Route path="/about-us" element={<About />} />
+        <Route path="/payment" element={<Payment />} />
       </Routes>
     </ParallaxProvider>
   )

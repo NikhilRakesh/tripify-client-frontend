@@ -1,14 +1,11 @@
 import React, { useEffect, useState, useTransition } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import api from './Axios';
-import { format } from 'date-fns';
 import LoadingSpinner from './LoadingSpinner';
 import { motion } from 'framer-motion';
 import "./styles.css";
 import BlogPhase from './BlogPhase';
-import RadialGradient from './magicui/radial-gradient';
 import DotPattern from './magicui/DotPatternProps';
-import LinearGradient from './magicui/LinearGradient';
 import EnquiryForm2 from './EnquiryForm2';
 
 const BlogPage = () => {
@@ -59,12 +56,15 @@ const BlogPage = () => {
 
 
     <div className="flex flex-col md:flex-row  gap-8 relative h-screen  bg-gray-200 z-0 ">
+      <div className='opacity-25 -z-0'>
+        <DotPattern width={16} height={16} cx={2} cy={2} cr={2} />
+      </div>
       <div className='bg-gradient-to-r from-[#ce8936] via-[#f6c871] to-[#f1b852] md:flex px-5 pb-36 absolute -z-10 w-full h-1/2'>
       </div>
       {/* Main Blog Content */}
-      <div className='fixed h-screen overflow-y-scroll scrollbar'>
-        <div className='md:flex px-5 pb-36 bg-transparent absolute -z-10 w-full'>
+      <div className='md:fixed h-screen overflow-y-scroll scrollbar'>
 
+        <div className='md:flex px-5 pb-36 bg-transparent absolute -z-10 w-full'>
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
@@ -73,6 +73,7 @@ const BlogPage = () => {
           >
             <img src="/blogwomen-removebg-preview.png" alt="" className='md:w-8/12 w-6/12 ' />
           </motion.div>
+
           <motion.div
             className='text-white md:text-6xl text-5xl m-auto font-bold'
             initial={{ opacity: 0, y: 20 }}
@@ -83,12 +84,11 @@ const BlogPage = () => {
             <p className='text-lg text-black p-2'>Your Travel Updates</p>
           </motion.div>
         </div>
-        <div className='md:flex gap-8 md:px-10 px-4'>
-          <div onClick={() => { Navigate('/') }} className='absolute top-0'>
+
+        <div className='md:flex gap-8 md:px-10 px-4 m-3'>
+
+          <div onClick={() => { Navigate('/') }} className='absolute top-0 '>
             <img src="/TRIP999Artboard 1@4x (1) (Copy).png" alt="" className='w-28 pt-5  cursor-pointer' />
-          </div>
-          <div className='opacity-25'>
-            <DotPattern width={16} height={16} cx={2} cy={2} cr={2} />
           </div>
 
           <motion.div
@@ -97,11 +97,11 @@ const BlogPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="heading-container py-8">
-              <h2 className="text-black text-4xl font-bold gradient-text mb-6">{blog.blogs[0].header}</h2>
+            <div className=" py-8">
+              <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 tracking-tight leading-tight bg-clip-text text-transparent bg-gradient-to-r from-gray-800 to-gray-500 mb-6">{blog.blogs[0].header}</h2>
             </div>
             <motion.div
-              className=" bg-transparent backdrop-blur-lg bg-white bg-opacity-30 border border-white rounded-full py-4 px-6 flex items-center justify-between "
+              className="bg-transparent backdrop-blur-lg bg-white bg-opacity-30 border border-white rounded-full py-4 px-6 flex items-center justify-between "
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -122,9 +122,10 @@ const BlogPage = () => {
               </motion.div>
             </motion.div>
             {blog.blogs.map((blogItem, index) => (
-              <BlogPhase key={index} blog={blogItem} />
+              <BlogPhase key={index} blog={blogItem} index={index} />
             ))}
           </motion.div>
+
           {/* Related Blogs Sidebar */}
           <motion.div
             className="w-full md:w-4/12 bg-transparent border-gray-200 rounded-lg shadow-md overflow-auto lg:mt-[350px]  backdrop-blur-lg border"
@@ -152,13 +153,15 @@ const BlogPage = () => {
                   <div className="w-2/3">
                     <h4 className="font-medium text-lg mb-1">{relatedBlog.blogs[0].header}</h4>
                     {/* <p className="text-sm text-gray-600">{format(new Date(relatedBlog.date), 'MMMM d, yyyy')}</p> */}
-                    <p className="text-sm text-gray-800 mt-2">{truncateText(relatedBlog.blogs[0].introduction, 100)}</p>
+                    <p className="text-sm text-gray-800 mt-2 truncate">{truncateText(relatedBlog.blogs[0].introduction, 100)}</p>
                   </div>
                 </motion.div>
               ))}
             </div>
           </motion.div>
+
         </div>
+
       </div>
     </div>
 

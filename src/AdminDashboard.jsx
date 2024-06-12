@@ -399,20 +399,6 @@ const BlogItem = ({ index, blog, onEditBlog, onDeleteBlog, setLoadingTrue, callR
         }
     };
 
-    // const arrayBufferToBase64 = (buffer) => {
-    //     let binary = '';
-    //     const bytes = new Uint8Array(buffer);
-    //     const len = bytes.byteLength;
-    //     for (let i = 0; i < len; i++) {
-    //       binary += String.fromCharCode(bytes[i]);
-    //     }
-    //     return btoa(binary);
-    //   };
-
-    //   // Convert binary image data to Base64 string
-    //   const imageBase64 = arrayBufferToBase64(blog.image.data);
-    //   const imageSrc = `data:image/jpeg;base64,${imageBase64}`;
-
     function truncateText(text, maxLength) {
         if (text?.length <= maxLength) {
             return text;
@@ -425,7 +411,7 @@ const BlogItem = ({ index, blog, onEditBlog, onDeleteBlog, setLoadingTrue, callR
             <img src={blog.blogs[0]?.image} alt={blog.blogs[0]?.header} className="rounded-md object-cover w-full h-48 mb-4" />
             <div>
                 <h3 className="text-xl font-semibold mb-2">{blog.blogs[0]?.header}</h3>
-                <p className="text-gray-600">{truncateText(blog.blogs[0]?.introduction, 100)}</p>
+                <p className="text-gray-600 truncate">{truncateText(blog.blogs[0]?.introduction, 100)}</p>
                 <div className="mt-4 flex justify-end space-x-2">
                     <button
                         onClick={handleDelete}

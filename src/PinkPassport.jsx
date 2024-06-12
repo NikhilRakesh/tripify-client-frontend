@@ -4,6 +4,8 @@ import GoogleReviewsCard from './GoogleReviewsCard';
 import Blog from './Blog';
 import api from './Axios';
 import { FaWhatsapp } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
+import toast, { Toaster } from 'react-hot-toast';
 
 const PinkPassport = () => {
 
@@ -67,6 +69,8 @@ const PinkPassport = () => {
   const [formVisible, setFormVisible] = useState(false);
   const formRef = useRef(null);
 
+  const navigate = useNavigate()
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -112,6 +116,7 @@ const PinkPassport = () => {
 
     try {
       const response = await api.post('/enquiry', formData);
+      console.log(response);
       if (response.status === 201) {
         toast.success('Enquiry Successfully Submited')
       }
@@ -140,15 +145,16 @@ const PinkPassport = () => {
       <div
         className="fixed top-3/4 md:top-24 lg:top-3/4 md:left-[95%] left-[90%] transform -translate-x-1/2 mt-4 px-6 py-3 bg-green-500 text-white rounded-full shadow-lg cursor-pointer flex items-center space-x-2 z-50"
         onClick={handleWhatsAppClick}
-      >
+      >         
         <FaWhatsapp className="text-2xl" />
       </div>
       <header className="flex border-b-2 px-10 py-5">
         <motion.div
-          className="md:w-6/12 md:px-16"
+          className="md:w-6/12 md:px-16 cursor-pointer"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
+          onClick={() => navigate('/')}
         >
           <img src="/PinkPassport new logo.png" alt="" className="w-4/12" />
         </motion.div>
@@ -178,7 +184,7 @@ const PinkPassport = () => {
           </div>
           <div className="py-5 pl-10">
             <button type="submit" className="bg-black  text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors duration-300">
-             Book Now
+              Book Now
             </button>
           </div>
         </motion.div>
@@ -311,6 +317,7 @@ const PinkPassport = () => {
           </form>
         </motion.div>
       </div>
+      <Toaster/>
     </div>
   );
 };

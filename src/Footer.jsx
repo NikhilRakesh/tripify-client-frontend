@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 const Footer = () => {
 
@@ -7,6 +8,10 @@ const Footer = () => {
   const toggleModal = () => {
     setShowModal(!showModal);
   };
+
+  const onclick = () => {
+    toast.error('Return is not applicable')
+  }
 
   return (
     <footer className="bg-gray-100 py-12">
@@ -32,10 +37,10 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-2">
             <h2 className="text-gray-800 text-xl font-bold">Company</h2>
             <a href="/TermsOf-ServicePage" className="text-gray-600">
-              Trems and Conditions
+              Terms and Conditions
             </a>
             <a href="/Privacy-Policy" className="text-gray-600">
               Privacy Policy
@@ -43,20 +48,11 @@ const Footer = () => {
             <a href="/Return-Policy" className="text-gray-600">
               Refund Policy
             </a>
+            <a onClick={onclick} className="text-gray-600 cursor-pointer">
+              Return
+            </a>
           </div>
 
-          {/* <div className="flex flex-col space-y-4">
-            <h2 className="text-gray-800 text-xl font-bold">Contact</h2>
-            <a href="#" className="text-gray-600">
-              Help/FAQ
-            </a>
-            <a href="#" className="text-gray-600">
-              Press
-            </a>
-            <a href="#" className="text-gray-600">
-              Affiliates
-            </a>
-          </div> */}
           <div className="flex flex-col space-y-2 ">
             <h2 className="text-gray-800 text-xl font-bold">Reach Us</h2>
             <div className="flex items-center space-x-4">
@@ -107,11 +103,12 @@ const Footer = () => {
 
           <div className=" md:flex items-end md:justify-end ">
             <p className="text-gray-600 text-lg lg:mt-0 text-center pt-5">
-              All rights reserved@tripify.com
+              All rights reserved@tripify.in
             </p>
           </div>
         </div>
       </div>
+      <Toaster />
     </footer>
   );
 };

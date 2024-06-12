@@ -1,13 +1,20 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const TermsOfServicePage = () => {
+
+    const navigate = useNavigate()
+
     return (
-        <div className="bg-gray-100 min-h-screen py-12">
+        <div className="bg-gray-100 min-h-screen relative py-12">
+            <div className='cursor-pointer absolute top-0 left-0 p-10' onClick={() => navigate('/')}>
+                <img src="/TRIP999Artboard 1@4x (1).png" alt="" className='w-20' />
+            </div>
             <div className="max-w-4xl mx-auto px-4">
-                <h2 className="text-3xl font-bold mb-8">Terms of Service</h2>
+                <h2 className="text-3xl font-bold mb-8">Terms and Conditions</h2>
                 <div className="bg-white p-6 rounded-lg shadow-md">
                     <p className="text-lg mb-6">
-                        This website is operated by tripify. Throughout the site, the terms “we”, “us” and “our” refer to Nolja. Nolja offers this website, including all information, tools and Services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here.
+                        This website is operated by TRIPIFYME BY QATAYWORLD PVT LTD. Throughout the site, the terms “we”, “us” and “our” refer to TRIPIFYME BY QATAYWORLD PVT LTD. TRIPIFYME BY QATAYWORLD PVT LTD offers this website, including all information, tools and Services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here.
                     </p>
                     <p className="text-lg mb-6">
                         By visiting our site and/ or purchasing something from us, you engage in our “Service” and agree to be bound by the following terms and conditions (“Terms of Service”, “Terms”), including those additional terms and conditions and policies referenced herein and/or available by hyperlink. These Terms of Service apply to all users of the site, including without limitation users who are browsers, vendors, customers, merchants, and/ or contributors of content.
@@ -150,12 +157,12 @@ const TermsOfServicePage = () => {
                         You expressly agree that your use of, or inability to use, the Service is at your sole risk. The Service and all products and Services delivered to you through the Service are (except as expressly stated by us) provided 'as is' and 'as available' for your use, without any representation, warranties or conditions of any kind, either express or implied, including all implied warranties or conditions of merchantability, merchantable quality, fitness for a particular purpose, durability, title, and non-infringement.
                     </p>
                     <p className="text-lg mb-6">
-                        In no case shall Nolja, our directors, officers, employees, affiliates, agents, contractors, interns, suppliers, Service providers or licensors be liable for any injury, loss, claim, or any direct, indirect, incidental, punitive, special, or consequential damages of any kind, including, without limitation lost profits, lost revenue, lost savings, loss of data, replacement costs, or any similar damages, whether based in contract, tort (including negligence), strict liability or otherwise, arising from your use of any of the Service or any products procured using the Service, or for any other claim related in any way to your use of the Service or any product, including, but not limited to, any errors or omissions in any content, or any loss or damage of any kind incurred as a result of the use of the Service or any content (or product) posted, transmitted, or otherwise made available via the Service, even if advised of their possibility. Because some states or jurisdictions do not allow the exclusion or the limitation of liability for consequential or incidental damages, in such states or jurisdictions, our liability shall be limited to the maximum extent permitted by law.
+                        In no case shall TRIPIFYME BY QATAYWORLD PVT LTD, our directors, officers, employees, affiliates, agents, contractors, interns, suppliers, Service providers or licensors be liable for any injury, loss, claim, or any direct, indirect, incidental, punitive, special, or consequential damages of any kind, including, without limitation lost profits, lost revenue, lost savings, loss of data, replacement costs, or any similar damages, whether based in contract, tort (including negligence), strict liability or otherwise, arising from your use of any of the Service or any products procured using the Service, or for any other claim related in any way to your use of the Service or any product, including, but not limited to, any errors or omissions in any content, or any loss or damage of any kind incurred as a result of the use of the Service or any content (or product) posted, transmitted, or otherwise made available via the Service, even if advised of their possibility. Because some states or jurisdictions do not allow the exclusion or the limitation of liability for consequential or incidental damages, in such states or jurisdictions, our liability shall be limited to the maximum extent permitted by law.
                     </p>
                     {/* Section 14 */}
                     <h3 className="text-2xl font-bold mb-4">SECTION 14 - INDEMNIFICATION</h3>
                     <p className="text-lg mb-6">
-                        You agree to indemnify, defend and hold harmless tripify and our parent, subsidiaries, affiliates, partners, officers, directors, agents, contractors, licensors, Service providers, subcontractors, suppliers, interns and employees, harmless from any claim or demand, including reasonable attorneys’ fees, made by any third-party due to or arising out of your breach of these Terms of Service or the documents they incorporate by reference, or your violation of any law or the rights of a third-party.
+                        You agree to indemnify, defend and hold harmless TRIPIFYME BY QATAYWORLD PVT LTD and our parent, subsidiaries, affiliates, partners, officers, directors, agents, contractors, licensors, Service providers, subcontractors, suppliers, interns and employees, harmless from any claim or demand, including reasonable attorneys’ fees, made by any third-party due to or arising out of your breach of these Terms of Service or the documents they incorporate by reference, or your violation of any law or the rights of a third-party.
                     </p>
                     {/* Section 15 */}
                     <h3 className="text-2xl font-bold mb-4">SECTION 15 - SEVERABILITY</h3>

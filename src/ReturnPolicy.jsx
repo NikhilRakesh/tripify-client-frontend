@@ -1,8 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ReturnPolicy = () => {
+
+    const navigate = useNavigate()
+
     return (
-        <div className="container mx-auto py-12 px-5">
+        <div className="container relative mx-auto py-12 px-5">
+             <div className='cursor-pointer absolute top-0 left-0 p-5' onClick={() => navigate('/')}>
+                <img src="/TRIP999Artboard 1@4x (1).png" alt="" className='w-20' />
+            </div>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-8 ">Refund Policy</h2>
             <div className="prose lg:prose-lg">
                 <p>We have a 5-day return policy, which means you have 5 days after receiving your item to request a return.</p>
@@ -10,7 +17,7 @@ const ReturnPolicy = () => {
                 <p>Also, make a video while opening the parcel and the box inside. We need the video so that we can raise a complaint with the courier company if there has been a theft.</p>
                 <p>To start a return, you can contact us at <a href="mailto:sales@tripifyme.com">sales@tripifyme.com</a> or on WhatsApp at <a href="tel:+919072121217">+91 90721 21217</a>.</p>
                 <p>We will arrange return pickup from the provided address once your return is accepted. Please package your items in their original packaging and hand them over to our courier partner. The pickup may take 3-5 business days, and you will receive an acknowledgment receipt once it has been completed. Once we receive your items, we will inspect them and issue a refund to your original payment method. If you paid with cash, you will receive a credit note.</p>
-                <p>If more than 15 business days have passed since we’ve approved your return, please contact us at <a href="mailto:info@nolja.in">info@nolja.in</a> or on WhatsApp at <a href="tel:+919778282728">+91 97782 82728</a>.</p>
+                <p>If more than 15 business days have passed since we’ve approved your return, please contact us at <a href="sales@tripifyme.com">sales@tripifyme.com</a> or on WhatsApp at <a href="tel:+919778282728">+91 97782 82728</a>.</p>
                 <h3 className="text-xl font-bold mt-8 mb-4">Damages and Issues</h3>
                 <p>Please inspect your order upon reception and contact us immediately if the item is defective, damaged, or if you receive the wrong item, so that we can evaluate the issue and make it right.</p>
                 <h3 className="text-xl font-bold mt-8 mb-4">Exceptions / Non-returnable Items</h3>
