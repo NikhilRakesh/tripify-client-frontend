@@ -37,7 +37,7 @@ const Header2 = () => {
                             <a onClick={() => navigate('/pink-passport')} className="text-gray-400 cursor-pointer">Pink Passport</a>
                             <a onClick={() => navigate('/Coprate-TravelPage')} className="text-gray-400 cursor-pointer">Corporate travel</a>
                             <a onClick={() => navigate('/Land-Explore')} className="text-gray-400 cursor-pointer">LandXplorer</a>
-                            <a onClick={() => navigate('/payment')} className="text-gray-400 cursor-pointer">Make Payment</a>
+                            <a onClick={() => navigate('/Payment-Form')} className="text-gray-400 cursor-pointer">Make Payment</a>
                         </nav>
                     </div>       
                 )}

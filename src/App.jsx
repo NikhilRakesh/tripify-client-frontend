@@ -32,6 +32,7 @@ import { FaWhatsapp } from 'react-icons/fa'
 import Whatsapp from './Whatsapp'
 import About from './About'
 import Payment from './Payment'
+import PaymentForm from './PaymentForm'
 
 function App() {
 
@@ -68,7 +69,8 @@ function App() {
         <Route path="/Privacy-Policy" element={<PrivacyPolicy />} />
         <Route path="/TermsOf-ServicePage" element={<TermsOfServicePage />} />
         <Route path="/about-us" element={<About />} />
-        <Route path="/payment" element={<Payment />} />
+        {/* <Route path="/payment" element={<Payment />} /> */}
+        <Route path="/Payment-Form" element={<PaymentForm />} />
       </Routes>
     </ParallaxProvider>
   )
