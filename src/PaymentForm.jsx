@@ -3,6 +3,7 @@ import 'animate.css';
 import { useNavigate } from 'react-router-dom';
 
 const PaymentForm = () => {
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -20,6 +21,8 @@ const PaymentForm = () => {
             [name]: value
         });
     };
+    const navigate = useNavigate();
+
 
     const handleContinue = () => {
         setIsPaymentStep(true);
@@ -32,6 +35,17 @@ const PaymentForm = () => {
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-gray-800 to-gray-900 py-6">
+            <div
+                className="cursor-pointer absolute top-0 left-0 px-10 py-5"
+                onClick={() => navigate('/')}
+            >
+                <img
+                    src="/TRIP999Artboard 1@4x (1).png"
+                    alt="TRIPIFYME Logo"
+                    className="w-20"
+                />
+                <p className='text-sm font-bold text-white py-2'>By QATAYWORLD PVT LTD</p>
+            </div>
             <div className="bg-white p-8 rounded-lg shadow-2xl w-full max-w-md animate__animated animate__fadeInUp">
                 {!isPaymentStep ? (
                     <>
