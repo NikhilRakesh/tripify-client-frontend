@@ -65,7 +65,7 @@ const ReturnPolicy = () => {
 
                 <section>
                     <h3 className="font-bold text-2xl">Refunds (if applicable)</h3>
-                    <p>If your refund is approved, then your refund will be processed, and a credit will automatically be applied to your credit card or original method of payment, within a certain amount of days.</p>
+                    <p>If your refund is approved, then your refund will be processed in 15 days, and a credit will automatically be applied to your credit card or original method of payment, within a certain amount of days.</p>
                 </section>
 
                 <section>
