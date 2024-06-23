@@ -33,6 +33,9 @@ import Whatsapp from './Whatsapp'
 import About from './About'
 import Payment from './Payment'
 import PaymentForm from './PaymentForm'
+import PhotoGallery from './PhotoGallery'
+import BlogPage2 from './BlogPage2'
+import PaymentSuccessPage from './PaymentSuccessPage'
 
 function App() {
 
@@ -60,6 +63,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blogs/:id" element={<BlogPage />} />
+        <Route path="/blogs" element={<BlogPage2 />} />
         <Route path="/admin-login" element={<AdminLogin />} />
         <Route path="/admin-dashboard" element={<AdminDashboard />} />
         <Route path="/pink-passport" element={<PinkPassport />} />
@@ -69,8 +73,9 @@ function App() {
         <Route path="/Privacy-Policy" element={<PrivacyPolicy />} />
         <Route path="/TermsOf-ServicePage" element={<TermsOfServicePage />} />
         <Route path="/about-us" element={<About />} />
-        {/* <Route path="/payment" element={<Payment />} /> */}
         <Route path="/Payment-Form" element={<PaymentForm />} />
+        <Route path="/Photo-Gallery" element={<PhotoGallery />} />
+        <Route path="/paymentSuccess" element={<PaymentSuccessPage />} />
       </Routes>
     </ParallaxProvider>
   )

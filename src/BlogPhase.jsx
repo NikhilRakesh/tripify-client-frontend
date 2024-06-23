@@ -2,7 +2,6 @@ import React from 'react';
 import { format } from 'date-fns';
 import './styles.css'
 const BlogPhase = ({ blog, index }) => {
-  console.log('blog', blog, index);
 
   return (
     <div className="my-8 p-4 md:p-6 ">

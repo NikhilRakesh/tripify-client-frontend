@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useTransition } from 'react';
+import React, { useEffect, useRef, useState, useTransition } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import api from './Axios';
 import LoadingSpinner from './LoadingSpinner';
@@ -13,7 +13,13 @@ const BlogPage = () => {
   const [relatedBlogs, setRelatedBlogs] = useState([]);
   const { id } = useParams();
   const [index, setIndex] = useState(0);
+  const TopRef = useRef(null);
 
+  useEffect(() => {
+    setTimeout(() => {
+      TopRef.current.scrollIntoView({ behavior: 'smooth' });
+    }, 0);
+  }, []);
 
   useEffect(() => {
     const fetchBlogs = async () => {
@@ -48,14 +54,16 @@ const BlogPage = () => {
     return text?.length <= maxLength ? text : `${text?.slice(0, maxLength)}...`;
   };
 
+
   const Navigate = useNavigate()
+
 
   return isEmpty ? (
     <LoadingSpinner />
   ) : (
 
 
-    <div className="flex flex-col md:flex-row  gap-8 relative h-screen  bg-gray-200 z-0 ">
+    <div ref={TopRef} className="flex flex-col md:flex-row  gap-8 relative h-screen  bg-gray-200 z-0 ">
       <div className='opacity-25 -z-0'>
         <DotPattern width={16} height={16} cx={2} cy={2} cr={2} />
       </div>

@@ -33,16 +33,17 @@ const Header2 = () => {
                         <button className="text-white font-bold text-lg mb-4" onClick={toggleNav}>Close</button>
                         <nav className="flex flex-col space-y-2">
                             <a onClick={() => { navigate('/about-us') }} className="text-gray-400 cursor-pointer">About Us</a>
-                            <a className="text-gray-400 cursor-pointer">Gallery</a>
+                            <a onClick={() => { navigate('/blogs') }} className="text-gray-400 cursor-pointer">Blogs</a>
+                            <a onClick={() => navigate('/Photo-Gallery')} className="text-gray-400 cursor-pointer">Gallery</a>
                             <a onClick={() => navigate('/pink-passport')} className="text-gray-400 cursor-pointer">Pink Passport</a>
                             <a onClick={() => navigate('/Coprate-TravelPage')} className="text-gray-400 cursor-pointer">Corporate travel</a>
                             <a onClick={() => navigate('/Land-Explore')} className="text-gray-400 cursor-pointer">LandXplorer</a>
-                            <a onClick={() => navigate('/Payment-Form')} className="text-gray-400 cursor-pointer">Make Payment</a>
+                            {/* <a onClick={() => navigate('/Payment-Form')} className="text-gray-400 cursor-pointer">Make Payment</a> */}
                         </nav>
-                    </div>       
+                    </div>
                 )}
                 <div className='md:flex justify-between relative '>
-                    <div className='md:w-1/2 p-4 md:p-7 flex flex-col gap-10 md:gap-0 '>    
+                    <div className='md:w-1/2 p-4 md:p-7 flex flex-col gap-10 md:gap-0 '>
                         <div className='flex md:justify-start justify-center'>
                             <img src="/TRIP999Artboard 1@4x (1).png" alt="logo" className='w-32 md:w-48' />
                         </div>

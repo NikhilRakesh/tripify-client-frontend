@@ -5,13 +5,17 @@
 
 
 body {
-  overflow-x: hidden; /* Hide the horizontal scrollbar */
-  overflow-y: scroll; /* Always show the vertical scrollbar */
+  overflow-x: hidden;
+  /* Hide the horizontal scrollbar */
+  overflow-y: scroll;
+  /* Always show the vertical scrollbar */
 }
 
 body::-webkit-scrollbar {
-  width: 12px; /* Adjust the width as needed */
-  height: 0; /* Hide the horizontal scrollbar */
+  width: 12px;
+  /* Adjust the width as needed */
+  height: 0;
+  /* Hide the horizontal scrollbar */
 }
 
 body::-webkit-scrollbar-thumb {
@@ -20,27 +24,30 @@ body::-webkit-scrollbar-thumb {
 }
 
 .blog::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
+
 .scrollbar::-webkit-scrollbar {
   display: none;
 }
+
 @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateX(50px);
   }
-  
-  .service-card {
-    transition: transform 0.5s ease, opacity 0.5s ease;
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
-  
-  .service-card.animate-enter {
-    animation: fadeIn 0.5s forwards;
-  }
-  
+}
+
+.service-card {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.service-card.animate-enter {
+  animation: fadeIn 0.5s forwards;
+}
+

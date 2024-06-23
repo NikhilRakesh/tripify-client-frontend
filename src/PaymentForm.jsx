@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import 'animate.css';
 import { useNavigate } from 'react-router-dom';
+import toast, { Toaster } from 'react-hot-toast';
 
 const PaymentForm = () => {
 
@@ -12,6 +14,7 @@ const PaymentForm = () => {
         pincode: '',
         amount: ''
     });
+
     const [isPaymentStep, setIsPaymentStep] = useState(false);
 
     const handleChange = (e) => {
@@ -23,18 +26,33 @@ const PaymentForm = () => {
     };
     const navigate = useNavigate();
 
-
     const handleContinue = () => {
         setIsPaymentStep(true);
     };
 
-    const handlePayment = () => {
-        alert(`Payment of ${formData.amount} initiated for ${formData.name}`);
-        // Implement actual payment logic here
+    const handlePayment = async () => {
+        try {
+            const response = await axios.post('https://tripifyme.in:/api/createTransaction', {
+                amount: formData.amount,
+                userId: formData.email 
+            });
+
+            const { success, data } = response.data;
+
+            if (success) {
+                // Redirect user to PhonePe payment page
+                window.location.href = data.paymentUrl;
+            } else {
+                toast.error('Failed to initiate payment');
+            }
+        } catch (error) {
+            console.error('Error initiating payment:', error);
+            toast.error('Error initiating payment');
+        }
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-gray-800 to-gray-900 py-6">
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-gray-800 to-gray-900 py-6">           
             <div
                 className="cursor-pointer absolute top-0 left-0 px-10 py-5"
                 onClick={() => navigate('/')}
@@ -145,6 +163,7 @@ const PaymentForm = () => {
                     </>
                 )}
             </div>
+            <Toaster />
         </div>
     );
 };

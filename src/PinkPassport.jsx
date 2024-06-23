@@ -11,7 +11,7 @@ const PinkPassport = () => {
 
 
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top of the page when component mounts
+    window.scrollTo(0, 0); 
   }, []);
 
 
